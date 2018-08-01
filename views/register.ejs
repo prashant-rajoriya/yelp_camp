@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+  <div class="container w-50 mt-4">
+      <h1 class="justify-center text-info">Sign Up</h1>
+    <form action="/register" method="post">
+      <div class="form-group">
+        <label for="username">Username: </label>
+        <input type="text" class="form-control" name="username" aria-describedby="titleHelp" placeholder="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+<% include ./partials/footer %>

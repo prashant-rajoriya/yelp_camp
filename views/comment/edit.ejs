@@ -1,0 +1,13 @@
+<% include ../partials/header %>
+  <div class="container w-50 mt-4">
+      <h1 class="justify-center text-info">Edit Comment</h1>
+    <form action="/campgrounds/<%= campground_id %>/comments/<%= comment._id %>?_method=PUT" method="post">
+      <div class="form-group">
+        <label for="comment[description]">Comment: </label>
+        <textarea class="form-control" name="comment[description]" rows="6" placeholder="Tell us about this campground"><%= comment.description %></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+<% include ../partials/footer %>
