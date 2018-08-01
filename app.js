@@ -19,8 +19,10 @@ const campgroundRoutes = require('./routes/campground');
 const commentRoutes = require('./routes/comment');
 
 //-----------Connect MongoDB----------------------
+const url = process.env.DATABASE || 'mongodb://localhost/yealp_camp_es8';
+console.log(url);
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/yealp_camp_es8')
+mongoose.connect(url)
       .then(() => console.log('Database Connected'))
       .catch((err) => console.error(err));
 
